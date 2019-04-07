@@ -11,6 +11,8 @@ sudo apt-get install php-curl
 ```
 Since the project uses the Geofox Thin Interface (GTI), which requires registration, you'll have to apply for API access, see [HVV page](https://www.hvv.de/de/fahrplaene/abruf-fahrplaninfos/datenabruf).
 
+Please note that the Geofox API documentation etc. is in German, as well as the software output, because the entire story takes place in Hamburg.
+
 ### Installing
 
 Install the ```assets``` and ```inc``` folders plus ```index.php``` to some directory on your machine where your web server can find it. Fill in the access credentials for the Geofox API in ```inc/hvvc_vars.php``` with your data, start up the web server (if it's not running already), and point your browser to the index.php. 
