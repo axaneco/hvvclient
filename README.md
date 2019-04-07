@@ -16,7 +16,7 @@ Please note that the Geofox API documentation etc. is in German, as well as the 
 ### Installing
 
 Install the ```assets``` and ```inc``` folders plus ```index.php``` to some directory on your machine where your web server can find it. Fill in the access credentials for the Geofox API in ```inc/hvvc_vars.php``` with your data, start up the web server (if it's not running already), and point your browser to the index.php. 
-If everything worked fine, you'll see the live departures of busses running from bus station Mensingstrasse in Hamburg, Germany. You can - and should - change this later on, of course.
+Now you should see the live departures of busses running from bus station Mensingstrasse in Hamburg, Germany, which you can - and should - change later on, of course.
 
 ## Testing
 
@@ -27,6 +27,10 @@ The ```DLResponse.xml``` provided contains realtime data for busses that are on 
 ## Authors
 
 * **axaneco** - *Initial work*
+
+## Acknowledgements
+
+Thanks to Simon for proofreading.
 
 ## License
 
