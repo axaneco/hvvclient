@@ -7,7 +7,7 @@ A live departure board for HVV buses in Hamburg, Germany, implemented via REST c
 
 You'll need a webserver with PHP support, plus curl and the php-curl-module, for Ubuntu:
 ```
-sudo apt-install php-curl
+sudo apt-get install php-curl
 ```
 Since the project uses the Geofox Thin Interface (GTI), which requires registration, you'll have to apply for API access, see [HVV page](https://www.hvv.de/de/fahrplaene/abruf-fahrplaninfos/datenabruf).
 
