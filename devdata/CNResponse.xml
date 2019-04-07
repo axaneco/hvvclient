@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><gti:CNResponse xmlns:gti="http://www.geofox.de/schema/geofoxThinInterface">
+    <returnCode>OK</returnCode>
+    <results>
+        <name>Bf. Harburg</name>
+        <city>Hamburg</city>
+        <id>Master:49001</id>
+        <type>STATION</type>
+        <coordinate>
+            <x>9.989959</x>
+            <y>53.456602</y>
+        </coordinate>
+    </results>
+</gti:CNResponse>

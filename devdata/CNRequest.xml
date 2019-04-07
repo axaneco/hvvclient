@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gti:CNRequest xmlns:gti="http://www.geofox.de/schema/geofoxThinInterface">
+    <theName>
+        <name>Bf. Harburg</name>
+        <type>STATION</type>
+    </theName>
+    <maxList>5</maxList>
+    <coordinateType>EPSG_4326</coordinateType>
+</gti:CNRequest>

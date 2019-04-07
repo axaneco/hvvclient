@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gti:DLRequest xmlns:gti="http://www.geofox.de/schema/geofoxThinInterface">
+    <version>35</version>
+    <station>
+        <name>Mensingstra..e</name>
+        <city>Hamburg</city>
+        <id>Master:43046</id>
+        <type>STATION</type>
+    </station>
+    <time>
+        <date>07.04.2019</date>
+        <time>16:04</time>
+    </time>
+    <maxList>30</maxList>
+    <maxTimeOffset>720</maxTimeOffset>
+    <useRealtime>true</useRealtime>
+</gti:DLRequest>

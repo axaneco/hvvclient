@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><gti:DLResponse xmlns:gti="http://www.geofox.de/schema/geofoxThinInterface">
+    <returnCode>OK</returnCode>
+    <time>
+        <date>07.04.2019</date>
+        <time>16:04</time>
+    </time>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>Meckelfeld, Schulzentrum</direction>
+            <origin>S Neugraben</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>Solobus</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>12</timeOffset>
+        <delay>240</delay>
+        <serviceId>90660</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <value>Prognose ungenau - Fahrzeug im Stau</value>
+            <types>REALTIME</types>
+            <types>TRAFFIC_JAM</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>S Neugraben</direction>
+            <origin>An der Eiche</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>Solobus</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>14</timeOffset>
+        <delay>0</delay>
+        <serviceId>90521</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>An der Eiche</direction>
+            <origin>S Neugraben</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>Solobus</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>32</timeOffset>
+        <delay>300</delay>
+        <serviceId>90423</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>S Neugraben</direction>
+            <origin>An der Eiche</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>Solobus</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>34</timeOffset>
+        <delay>0</delay>
+        <serviceId>90523</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>An der Eiche</direction>
+            <origin>S Neugraben</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>Solobus</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>52</timeOffset>
+        <delay>0</delay>
+        <serviceId>90426</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>S Neugraben</direction>
+            <origin>Meckelfeld, Schulzentrum</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>Solobus</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>54</timeOffset>
+        <delay>0</delay>
+        <serviceId>90603</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>Meckelfeld, Schulzentrum</direction>
+            <origin>S Neugraben</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>Solobus</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>72</timeOffset>
+        <delay>0</delay>
+        <serviceId>90662</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>S Neugraben</direction>
+            <origin>An der Eiche</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>Solobus</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>74</timeOffset>
+        <delay>0</delay>
+        <serviceId>90525</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>An der Eiche</direction>
+            <origin>S Neugraben</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>Solobus</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>92</timeOffset>
+        <delay>0</delay>
+        <serviceId>90430</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>S Neugraben</direction>
+            <origin>An der Eiche</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>Solobus</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>94</timeOffset>
+        <delay>0</delay>
+        <serviceId>90526</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>An der Eiche</direction>
+            <origin>S Neugraben</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>Solobus</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>111</timeOffset>
+        <delay>0</delay>
+        <serviceId>90432</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>S Neugraben</direction>
+            <origin>Meckelfeld, Schulzentrum</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>Solobus</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>114</timeOffset>
+        <delay>0</delay>
+        <serviceId>90608</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>Meckelfeld, Schulzentrum</direction>
+            <origin>S Neugraben</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>Solobus</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>131</timeOffset>
+        <delay>0</delay>
+        <serviceId>90665</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>S Neugraben</direction>
+            <origin>An der Eiche</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>BUS</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>134</timeOffset>
+        <serviceId>90530</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>An der Eiche</direction>
+            <origin>S Neugraben</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>Solobus</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>151</timeOffset>
+        <delay>0</delay>
+        <serviceId>90435</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>S Neugraben</direction>
+            <origin>An der Eiche</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>BUS</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>154</timeOffset>
+        <serviceId>90533</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>An der Eiche</direction>
+            <origin>S Neugraben</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>BUS</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>171</timeOffset>
+        <serviceId>90438</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>S Neugraben</direction>
+            <origin>Meckelfeld, Schulzentrum</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>BUS</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>174</timeOffset>
+        <serviceId>90611</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>Meckelfeld, Schulzentrum</direction>
+            <origin>S Neugraben</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>BUS</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>191</timeOffset>
+        <serviceId>90668</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>S Neugraben</direction>
+            <origin>An der Eiche</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>BUS</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>194</timeOffset>
+        <serviceId>90536</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>S Neugraben</direction>
+            <origin>An der Eiche</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>BUS</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>204</timeOffset>
+        <serviceId>90539</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>An der Eiche</direction>
+            <origin>S Neugraben</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>BUS</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>211</timeOffset>
+        <serviceId>90442</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>Bostelbek</direction>
+            <origin>Meckelfeld, Schulzentrum</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>BUS</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>224</timeOffset>
+        <serviceId>90751</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>An der Eiche</direction>
+            <origin>S Neugraben</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>BUS</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>231</timeOffset>
+        <serviceId>90445</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>S Neugraben</direction>
+            <origin>An der Eiche</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>BUS</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>244</timeOffset>
+        <serviceId>90540</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>Meckelfeld, Schulzentrum</direction>
+            <origin>S Neugraben</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>BUS</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>251</timeOffset>
+        <serviceId>90669</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>Bostelbek</direction>
+            <origin>An der Eiche</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>BUS</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>264</timeOffset>
+        <serviceId>90682</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>An der Eiche</direction>
+            <origin>S Neugraben</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>BUS</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>271</timeOffset>
+        <serviceId>90448</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>An der Eiche</direction>
+            <origin>Bostelbek</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>BUS</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>281</timeOffset>
+        <serviceId>90626</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>141</name>
+            <direction>S Neugraben</direction>
+            <origin>Meckelfeld, Schulzentrum</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Stadtbus</longInfo>
+                <model>BUS</model>
+            </type>
+            <id>HHA-B:141_HHA-B</id>
+        </line>
+        <timeOffset>284</timeOffset>
+        <serviceId>90613</serviceId>
+        <station>
+            <combinedName>Mensingstra..e</combinedName>
+            <id>Master:43046</id>
+        </station>
+    </departures>
+</gti:DLResponse>
