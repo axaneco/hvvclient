@@ -1,5 +1,5 @@
 # hvvclient
-A live departure board for HVV buses in Hamburg, Germany, implemented via REST calls to the GeoFox API GTI
+A live departure board for HVV busses in Hamburg, Germany, implemented via REST calls to the GeoFox API GTI
 
 ## Getting Started
 
@@ -14,7 +14,7 @@ Since the project uses the Geofox Thin Interface (GTI), which requires registrat
 ### Installing
 
 Install the ```assets``` and ```inc``` folders plus ```index.php``` to some directory on your machine where your web server can find it. Fill in the access credentials for the Geofox API in ```inc/hvvc_vars.php``` with your data, start up the web server (if it's not running already), and point your browser to the index.php. 
-If all went OK, you'll see the live departures of buses running from bus station Mensingstrasse in Hamburg, Germany. You can - and should - change this later on, of course.
+If all went OK, you'll see the live departures of busses running from bus station Mensingstrasse in Hamburg, Germany. You can - and should - change this later on, of course.
 
 ## Testing
 
