@@ -30,7 +30,7 @@ The ```DLResponse.xml``` provided contains realtime data for busses that are on 
 
 ## Acknowledgements
 
-Thanks to Simon for proofreading.
+Thanks to Simon for proofreading this README.
 
 ## License
 
