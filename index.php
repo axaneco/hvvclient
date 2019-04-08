@@ -36,9 +36,9 @@ echo "<img src='https://www.hvv.de/images/logo_hvv_110x25.png' alt='Mit dem HVV 
 
 // print departure list
 if ($test_flag) { // test is unfiltered, both directions
-    echo "</a><br><br>Nächste Busse (ungefiltert):<br><br>";
+    echo "</a><br><br>Nächste Abfahrten ab " . $stat["ms"][0] . " (ungefiltert):<br><br>";
 } else {
-    echo "</a><br><br>Nächste Busse in die Stadt:<br><br>";
+    echo "</a><br><br>Nächste Abfahrten ab " . $stat["ms"][0] . " Richtung " . $stat["bf"][0] . ":<br><br>";
 }
 print_departures($resultxml, $maxlist, TRUE);
 

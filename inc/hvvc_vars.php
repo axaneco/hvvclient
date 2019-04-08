@@ -16,7 +16,7 @@ $test_flag = TRUE;
 // stations array
 // first station: departures
 // second station: via filter for direction control
-$stations = array(  "ms" => array( "Mensingstraße", "XXX"), 
+$stations = array(  "ms" => array( "Bf. Harburg", "XXX"), 
                     "bf" => array( "Bf. Harburg", "XXX") 
 );
 
