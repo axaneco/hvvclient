@@ -33,12 +33,6 @@ $resultxml = simplexml_load_string($res);
 // write results
 echo "<br><a href='https://www.hvv.de/linking-service/show/1b0df0dc1be949e081b37ac02c92c0cf' target='_blank'>";
 echo "<img src='https://www.hvv.de/images/logo_hvv_110x25.png' alt='Mit dem HVV zu uns' height='25' border='0'/>";
-if ($test_flag) { // test is unfiltered, both directions
-    echo "</a><br><br>Nächste Busse (ungefiltert):<br><br>";
-} else {
-    echo "</a><br><br>Nächste Busse in die Stadt:<br><br>";
-}
-
 echo "</a><br><br>Nächste Busse:<br><br>";
 
 // print departure list
