@@ -116,7 +116,11 @@ function call_gti_api($gfunc, $http_body, $username, $password) // gfunc here ei
 }
 
 // print out the departure list
-function print_departures($resultxml, $maxlist) { // resultxml delivered by the GeoFox API, here: call_gti_api($gfunc, $http_body, $username, $password)
+function print_departures($resultxml, $maxlist, $mono = FALSE) { // resultxml delivered by the GeoFox API, here: call_gti_api($gfunc, $http_body, $username, $password)
+    if ($mono) {
+        echo "<span style='font-family:monospace;'>";
+        echo "<span style='font-size:16px;'>";
+    }
     if ($resultxml->returnCode == 'OK') {
         for ($i = 0; $i < $maxlist; $i++) {
             $id = $resultxml->departures[$i]->line->id;         // get bus id
