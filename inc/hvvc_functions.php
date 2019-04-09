@@ -116,15 +116,17 @@ function call_gti_api($gfunc, $http_body, $username, $password) // gfunc here ei
 }
 
 // print out the departure list
-function print_departures($resultxml, $maxlist, $mono = FALSE) { // resultxml delivered by the GeoFox API, here: call_gti_api($gfunc, $http_body, $username, $password)
-    if ($mono) {
-        echo "<span style='font-family:monospace;'>";
-        echo "<span style='font-size:16px;'>\n";
-    }
+function print_departures($resultxml, $maxlist, $table = FALSE) { // resultxml delivered by the GeoFox API, here: call_gti_api($gfunc, $http_body, $username, $password)
+    
+    echo "<span style='font-family:sans-serif;'>";
+    echo "<span style='font-size:16px;'>\n";
+    
+    if ($table) { echo "<table>\n"; }
     if ($resultxml->returnCode == 'OK') {
         for ($i = 0; $i < $maxlist; $i++) {
             $id = $resultxml->departures[$i]->line->id;         // get bus id
             if ($id) { // go on only if there's a result in the xml
+                if ($table) {  echo "<tr>"; }
                 $toffset = $resultxml->departures[$i]->timeOffset;  // departure time offset in minutes from query 
                 $tdelay = round(($resultxml->departures[$i]->delay) / 60, 0, PHP_ROUND_HALF_UP);  // planned/known delay, if any, converted to minutes
                 $tdep = $toffset + $tdelay; // estimated departure time including known delay
@@ -136,6 +138,7 @@ function print_departures($resultxml, $maxlist, $mono = FALSE) { // resultxml de
                 $tj = $resultxml->departures[$i]->attributes->types[1]; // is either ACCURATE or TRAFFIC_JAM
 
                 $dis = FALSE; // no disturbance initially
+                if ($table) { echo "<td>"; }
                 // no live info -> blank symbol
                 if ($rt != 'REALTIME') {
                     echo "<img src='assets/images/empty.png' height='14' border='0'/>";
@@ -155,32 +158,59 @@ function print_departures($resultxml, $maxlist, $mono = FALSE) { // resultxml de
                 if ($rt == 'REALTIME' && $dis == FALSE) {
                     echo "<img src='assets/images/green.png' height='14' border='0'/>";
                 }
+                if ($table) { 
+                    echo "</td>";
+                    echo "<td align='center'>";
+                }
                 echo "<img src='http://www.geofox.de/icon_service/line?height=14&amp;lineKey=" . $id . "'> ";   // line icon
+                if ($table) { 
+                    echo "</td>";
+                    echo "<td>";
+                }
                 // strike if no journey
                 if ($no) {
                     echo '<s>';
                 }
                 // "sofort" switch
                 echo $resultxml->departures[$i]->line->direction . ' '; // line direction 
+                if ($table) { 
+                    echo "</td>";
+                    echo "<td align='right'>";
+                }
                 if ($tdep == 0) {
-                    echo ' (sofort)';
+                    echo ' sofort';
                 } else {
-                    echo ' in ' . $tdep . ' Minute';
+                    if ($table) { 
+                        echo ' &nbsp;&nbsp '; 
+                    } else { 
+                        echo ' in ';    
+                    }    
+                        echo $tdep . ' Minute';
                     if ($tdep > 1) {
                         echo 'n';
                     } // minuten for 0, 2 - inf
                 }
                 // strike and display if no journey
+                if ($table) { 
+                    echo "</td>";
+                    echo "<td>";
+                }
                 if ($no) {
                     echo '</s>';
-                    echo ' FÄLLT AUS';
+                    echo '<font color="red"> FÄLLT AUS</font>';
                 }
                 if ($ex) {
                     echo ' (Verstärkerfahrt)';
                 }
-                echo "<br>\n";
+                if ($table) { 
+                    echo "</td>";
+                    echo "</tr>\n";
+                } else {
+                    echo "<br>\n";
+                }
             }
         }
+    echo "</table>";
     } else {
         echo 'Fehler: GeoFox returned an error';
     }
