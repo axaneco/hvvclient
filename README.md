@@ -1,5 +1,5 @@
 # hvvclient
-A live departure board for HVV busses in Hamburg, Germany, implemented via REST calls to the GeoFox API GTI
+A live departure board for HVV transport (busses, S-Bahn, subway etc.) in Hamburg, Germany, implemented via REST calls to the GeoFox API GTI
 
 ## Getting Started
 
@@ -22,7 +22,7 @@ Now you should see the live departures of busses running from bus station Mensin
 
 The ```devdata``` directory contains sample XML files that demonstrate the communication of the REST interface.
 The "request"-data is produced by the hvvclient, whereas the "response" data is delivered by the Geofox server.
-The ```DLResponse.xml``` provided contains realtime data for busses that are on time, delayed, or in traffic jam, as well as plan data where no realtime data is available.
+The ```DLResponse.xml``` provided contains realtime data for transport that are on time, delayed, or in traffic jam, as well as cancelled journeys and plan data where no realtime data is available.
 
 ## Authors
 
