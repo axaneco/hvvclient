@@ -31,14 +31,14 @@ $res = call_gti_api('departureList', $dl_xml, $username, $password);
 $resultxml = simplexml_load_string($res);  
 
 // write results
-echo "<br><a href='https://www.hvv.de/linking-service/show/1b0df0dc1be949e081b37ac02c92c0cf' target='_blank'>";
-echo "<img src='https://www.hvv.de/images/logo_hvv_110x25.png' alt='Mit dem HVV zu uns' height='25' border='0'/>";
+echo "<a href='https://www.hvv.de/linking-service/show/1b0df0dc1be949e081b37ac02c92c0cf' target='_blank'>\n";
+echo "<img src='https://www.hvv.de/images/logo_hvv_110x25.png' alt='Mit dem HVV zu uns' height='25' border='0'/>\n";
 
 // print departure list
 if ($test_flag) { // test is unfiltered, both directions
-    echo "</a><br><br>Nächste Abfahrten ab " . $stat["ms"][0] . " (ungefiltert):<br><br>";
+    echo "</a><br><br>Nächste Abfahrten ab " . $stat["ms"][0] . " (ungefiltert):<br><br>\n";
 } else {
-    echo "</a><br><br>Nächste Abfahrten ab " . $stat["ms"][0] . " Richtung " . $stat["bf"][0] . ":<br><br>";
+    echo "</a><br><br>Nächste Abfahrten ab " . $stat["ms"][0] . " Richtung " . $stat["bf"][0] . ":<br><br>\n";
 }
 print_departures($resultxml, $maxlist, TRUE);
 
