@@ -16,7 +16,7 @@ $test_flag = TRUE;
 // stations array
 // first station: departures
 // second station: via filter for direction control
-$stations = array(  "ms" => array( "Bf. Harburg", "XXX"), 
+$stations = array(  "ms" => array( "Rödingsmarkt", "XXX"), 
                     "bf" => array( "Bf. Harburg", "XXX") 
 );
 
@@ -24,13 +24,15 @@ $stations = array(  "ms" => array( "Bf. Harburg", "XXX"),
 $refday = date("d.m.Y");
 $reftime = date("H:i");
 
-// credentials for geofox api
-// to be requested via https://www.hvv.de/de/fahrplaene/abruf-fahrplaninfos/datenabruf/
-$username = 'your_username';
-$password = 'your_password';
-
 //display paramater
 $maxlist = 30; // max list items for query results
 $maxtimeoffset = 720; // results for max 12 hours in future
+
+// replace this by your data or...
+$username = 'username';
+$password = 'password';
+
+// ...include the data from an extra file
+include 'credentials.php';
 
 ?>
