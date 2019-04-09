@@ -119,7 +119,7 @@ function call_gti_api($gfunc, $http_body, $username, $password) // gfunc here ei
 function print_departures($resultxml, $maxlist, $mono = FALSE) { // resultxml delivered by the GeoFox API, here: call_gti_api($gfunc, $http_body, $username, $password)
     if ($mono) {
         echo "<span style='font-family:monospace;'>";
-        echo "<span style='font-size:16px;'>";
+        echo "<span style='font-size:16px;'>\n";
     }
     if ($resultxml->returnCode == 'OK') {
         for ($i = 0; $i < $maxlist; $i++) {
@@ -155,11 +155,12 @@ function print_departures($resultxml, $maxlist, $mono = FALSE) { // resultxml de
                 if ($rt == 'REALTIME' && $dis == FALSE) {
                     echo "<img src='assets/images/green.png' height='14' border='0'/>";
                 }
+                echo "<img src='http://www.geofox.de/icon_service/line?height=14&amp;lineKey=" . $id . "'> ";   // line icon
                 // strike if no journey
                 if ($no) {
                     echo '<s>';
                 }
-                echo "<img src='http://www.geofox.de/icon_service/line?height=14&amp;lineKey=" . $id . "'> ";   // line icon
+                // "sofort" switch
                 echo $resultxml->departures[$i]->line->direction . ' '; // line direction 
                 if ($tdep == 0) {
                     echo ' (sofort)';
@@ -177,7 +178,7 @@ function print_departures($resultxml, $maxlist, $mono = FALSE) { // resultxml de
                 if ($ex) {
                     echo ' (Verstärkerfahrt)';
                 }
-                echo '<br>';
+                echo "<br>\n";
             }
         }
     } else {
