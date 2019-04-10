@@ -128,6 +128,51 @@ function tab($table, $alignment = FALSE)
     }
 }
 
+// check disturbances
+function check_disturbances($resultxml, $i, $tdelay, $table) {
+    $rt = $resultxml->departures[$i]->attributes->types[0]; // is either REALTIME or missing
+    $tj = $resultxml->departures[$i]->attributes->types[1]; // is either ACCURATE or TRAFFIC_JAM
+    $dis = FALSE; // no disturbance initially
+    
+    if ($table) {
+        echo "<td>";
+    }
+    // no live info -> blank symbol
+    if ($rt != 'REALTIME') {
+        echo "<img src='assets/images/empty.png' height='14' border='0'/>";
+        $dis = TRUE;
+    }
+    // traffic jam -> black symbol
+    if ($tj == 'TRAFFIC_JAM') {
+        echo "<img src='assets/images/black.png' height='14' border='0'/>";
+        $dis = TRUE;
+    }
+    // delay (without traffic jam) -> yellow symbol
+    if ($tdelay > 0 && $dis == FALSE) {
+        echo "<img src='assets/images/yellow.png' height='14' border='0'/>";
+        $dis = TRUE;
+    }
+    $res = array( "rt" => $rt, "dis" => $dis );
+    return $res;
+}
+
+// sofort switch
+function now($tdep, $table) {
+    if ($tdep == 0) {
+        echo ' sofort';
+    } else {
+        if ($table) {
+            echo ' &nbsp;&nbsp ';
+        } else {
+            echo ' in ';
+        }
+        echo $tdep . ' Minute';
+        if ($tdep > 1) {
+            echo 'n';
+        } // minuten for 0, 2 - inf
+    }
+}
+
 // print out the departure list
 function print_departures($resultxml, $maxlist, $table = FALSE) { // resultxml delivered by the GeoFox API, here: call_gti_api($gfunc, $http_body, $username, $password)
     
@@ -143,32 +188,12 @@ function print_departures($resultxml, $maxlist, $table = FALSE) { // resultxml d
                 $toffset = $resultxml->departures[$i]->timeOffset;  // departure time offset in minutes from query 
                 $tdelay = round(($resultxml->departures[$i]->delay) / 60, 0, PHP_ROUND_HALF_UP);  // planned/known delay, if any, converted to minutes
                 $tdep = $toffset + $tdelay; // estimated departure time including known delay
-
                 $ex = $resultxml->departures[$i]->extra; // extra trip
                 $no = $resultxml->departures[$i]->cancelled; // trip cancelled
-
-                $rt = $resultxml->departures[$i]->attributes->types[0]; // is either REALTIME or missing
-                $tj = $resultxml->departures[$i]->attributes->types[1]; // is either ACCURATE or TRAFFIC_JAM
-
-                $dis = FALSE; // no disturbance initially
-                if ($table) { echo "<td>"; }
-                // no live info -> blank symbol
-                if ($rt != 'REALTIME') {
-                    echo "<img src='assets/images/empty.png' height='14' border='0'/>";
-                    $dis = TRUE;
-                }
-                // traffic jam -> black symbol
-                if ($tj == 'TRAFFIC_JAM') {
-                    echo "<img src='assets/images/black.png' height='14' border='0'/>";
-                    $dis = TRUE;
-                }
-                // delay (without traffic jam) -> yellow symbol
-                if ($tdelay > 0 && $dis == FALSE) {
-                    echo "<img src='assets/images/yellow.png' height='14' border='0'/>";
-                    $dis = TRUE;
-                }
-                // else: live info and everything ok -> green symbol
-                if ($rt == 'REALTIME' && $dis == FALSE) {
+                // check (and display as icon) disturbances
+                $dst = check_disturbances($resultxml, $i, $tdelay, $table);
+                // live info and everything ok -> green icon
+                if ($dst["rt"] == 'REALTIME' && $dst["dis"] == FALSE) {
                     echo "<img src='assets/images/green.png' height='14' border='0'/>";
                 }
                 tab($table, 'center');
@@ -178,22 +203,10 @@ function print_departures($resultxml, $maxlist, $table = FALSE) { // resultxml d
                 if ($no) {
                     echo '<s>';
                 }
-                // "sofort" switch
                 echo $resultxml->departures[$i]->line->direction . ' '; // line direction 
                 tab($table, 'right');
-                if ($tdep == 0) {
-                    echo ' sofort';
-                } else {
-                    if ($table) { 
-                        echo ' &nbsp;&nbsp '; 
-                    } else { 
-                        echo ' in ';    
-                    }    
-                        echo $tdep . ' Minute';
-                    if ($tdep > 1) {
-                        echo 'n';
-                    } // minuten for 0, 2 - inf
-                }
+                // "sofort" switch
+                now($tdep, $table);
                 // strike and display if no journey
                 tab($table);
                 if ($no) {
