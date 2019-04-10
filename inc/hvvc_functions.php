@@ -115,6 +115,19 @@ function call_gti_api($gfunc, $http_body, $username, $password) // gfunc here ei
     return $resultxml;
 }
 
+// tableswitch
+function tab($table, $alignment = FALSE)
+{
+    if ($table) { 
+        echo "</td>";
+        if ($alignment) {
+            echo "<td align=$alignment>";
+        } else {
+            echo "<td>";
+        }
+    }
+}
+
 // print out the departure list
 function print_departures($resultxml, $maxlist, $table = FALSE) { // resultxml delivered by the GeoFox API, here: call_gti_api($gfunc, $http_body, $username, $password)
     
@@ -158,25 +171,16 @@ function print_departures($resultxml, $maxlist, $table = FALSE) { // resultxml d
                 if ($rt == 'REALTIME' && $dis == FALSE) {
                     echo "<img src='assets/images/green.png' height='14' border='0'/>";
                 }
-                if ($table) { 
-                    echo "</td>";
-                    echo "<td align='center'>";
-                }
+                tab($table, 'center');
                 echo "<img src='http://www.geofox.de/icon_service/line?height=14&amp;lineKey=" . $id . "'> ";   // line icon
-                if ($table) { 
-                    echo "</td>";
-                    echo "<td>";
-                }
+                tab($table);
                 // strike if no journey
                 if ($no) {
                     echo '<s>';
                 }
                 // "sofort" switch
                 echo $resultxml->departures[$i]->line->direction . ' '; // line direction 
-                if ($table) { 
-                    echo "</td>";
-                    echo "<td align='right'>";
-                }
+                tab($table, 'right');
                 if ($tdep == 0) {
                     echo ' sofort';
                 } else {
@@ -191,10 +195,7 @@ function print_departures($resultxml, $maxlist, $table = FALSE) { // resultxml d
                     } // minuten for 0, 2 - inf
                 }
                 // strike and display if no journey
-                if ($table) { 
-                    echo "</td>";
-                    echo "<td>";
-                }
+                tab($table);
                 if ($no) {
                     echo '</s>';
                     echo '<font color="red"> FÄLLT AUS</font>';
@@ -202,10 +203,8 @@ function print_departures($resultxml, $maxlist, $table = FALSE) { // resultxml d
                 if ($ex) {
                     echo ' (Verstärkerfahrt)';
                 }
-                if ($table) { 
-                    echo "</td>";
-                    echo "</tr>\n";
-                } else {
+                tab($table);
+                if (!$table) {
                     echo "<br>\n";
                 }
             }
