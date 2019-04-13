@@ -11,13 +11,14 @@
  * 
  */
 
-$test_flag = TRUE;
+$both_dirs = TRUE;
 
 // stations array
 // first station: departures
 // second station: via filter for direction control
-$stations = array(  "ms" => array( "Rödingsmarkt", "XXX"), 
-                    "bf" => array( "Bf. Harburg", "XXX") 
+// XXX filled by get_station_keys() with HVV station codes
+$stations = array(  "dep" => array( "Rödingsmarkt", "XXX"), 
+                    "via" => array( "Hamburg Hbf", "XXX") 
 );
 
 // date

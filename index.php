@@ -18,10 +18,10 @@ include ('inc/hvvc_functions.php'); //functions
 $stat = get_station_keys($stations, $username, $password);
 
 // create gti:departureList request
-if ($test_flag) { // test is unfiltered, both directions
-    $dl_xml = create_gti_DLRequest ($stat["ms"][0], $stat["ms"][1], $refday, $reftime, $maxlist, $maxtimeoffset);
+if ($both_dirs) { // both directions
+    $dl_xml = create_gti_DLRequest ($stat["dep"][0], $stat["dep"][1], $refday, $reftime, $maxlist, $maxtimeoffset);
 } else {
-    $dl_xml = create_gti_DLRequest ($stat["ms"][0], $stat["ms"][1], $refday, $reftime, $maxlist, $maxtimeoffset, $stat["bf"][1]);
+    $dl_xml = create_gti_DLRequest ($stat["dep"][0], $stat["dep"][1], $refday, $reftime, $maxlist, $maxtimeoffset, $stat["via"][1]);
 }
 
 // get departure list for Mensingstraße
@@ -30,16 +30,22 @@ $res = call_gti_api('departureList', $dl_xml, $username, $password);
 // read result as xml
 $resultxml = simplexml_load_string($res);  
 
+echo "<span style='font-family:sans-serif;'>";
+echo "<span style='font-size:16px;'>\n";
+
 // write results
-echo "<a href='https://geofox.hvv.de/jsf/home.seam' target='_blank'>\n";
-echo "<img src='https://www.hvv.de/images/logo_hvv_110x25.png' alt='Mit dem HVV zu uns' height='25' border='0'/>\n";
+echo "<a href='https://geofox.hvv.de/jsf/home.seam' target='_blank'>";
+echo "<img src='https://www.hvv.de/images/logo_hvv_110x25.png' alt='Mit dem HVV zu uns' height='25' border='0'/>";
+echo "</a>\n";
 
 // print departure list
-if ($test_flag) { // test is unfiltered, both directions
-    echo "</a><br><br>Nächste Abfahrten ab " . $stat["ms"][0] . " (ungefiltert):<br><br>\n";
+if ($both_dirs) { // both directions
+    echo "<br><br>Nächste Abfahrten ab " . $stat["dep"][0] . " (ungefiltert):<br><br>\n";
 } else {
-    echo "</a><br><br>Nächste Abfahrten ab " . $stat["ms"][0] . " Richtung " . $stat["bf"][0] . ":<br><br>\n";
+    echo "<br><br>Nächste Abfahrten ab " . $stat["dep"][0] . " Richtung " . $stat["via"][0] . ":<br><br>\n";
 }
 print_departures($resultxml, $maxlist, TRUE);
+
+echo "</span></span>\n";
 
 ?>

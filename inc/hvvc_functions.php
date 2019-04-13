@@ -110,8 +110,7 @@ function call_gti_api($gfunc, $http_body, $username, $password) // gfunc here ei
     );
     // Submit the POST request
     $resultxml = curl_exec($ch);
-    curl_close($ch);
-    
+    curl_close($ch); 
     return $resultxml;
 }
 
@@ -175,10 +174,7 @@ function now($tdep, $table) {
 
 // print out the departure list
 function print_departures($resultxml, $maxlist, $table = FALSE) { // resultxml delivered by the GeoFox API, here: call_gti_api($gfunc, $http_body, $username, $password)
-    
-    echo "<span style='font-family:sans-serif;'>";
-    echo "<span style='font-size:16px;'>\n";
-    
+
     if ($table) { echo "<table>\n"; }
     if ($resultxml->returnCode == 'OK') {
         for ($i = 0; $i < $maxlist; $i++) {
@@ -199,30 +195,22 @@ function print_departures($resultxml, $maxlist, $table = FALSE) { // resultxml d
                 tab($table, 'center');
                 echo "<img src='http://www.geofox.de/icon_service/line?height=14&amp;lineKey=" . $id . "'> ";   // line icon
                 tab($table);
-                // strike if no journey
-                if ($no) {
-                    echo '<s>';
-                }
+                if ($no) { echo '<s>'; } // strike if no journey
                 echo $resultxml->departures[$i]->line->direction . ' '; // line direction 
+                if ($no) { echo '</s>'; }
                 tab($table, 'right');
-                // "sofort" switch
-                now($tdep, $table);
-                // strike and display if no journey
+                now($tdep, $table); // "sofort" switch
                 tab($table);
-                if ($no) {
-                    echo '</s>';
-                    echo '<font color="red"> FÄLLT AUS</font>';
-                }
-                if ($ex) {
-                    echo ' (Verstärkerfahrt)';
-                }
-                tab($table);
-                if (!$table) {
-                    echo "<br>\n";
+                if ($no) { echo '<font color="red"> FÄLLT AUS</font>'; } 
+                if ($ex) { echo ' (Verstärkerfahrt)'; }
+                if ($table) {
+                    echo "</td></tr>\n";
+                } else {
+                    echo "<br>\n";  
                 }
             }
         }
-    echo "</table>";
+    echo "</table>\n";
     } else {
         echo 'Fehler: GeoFox returned an error';
     }
