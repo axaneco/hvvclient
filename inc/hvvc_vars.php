@@ -13,6 +13,9 @@
 
 $both_dirs = TRUE;
 
+//geofox url
+$gfurl = 'http://api-test.geofox.de/gti/public/';
+
 // stations array
 // first station: departures
 // second station: via filter for direction control

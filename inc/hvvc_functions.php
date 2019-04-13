@@ -12,14 +12,14 @@
  */
 
 // get all the station keys
-function get_station_keys($stations, $username, $password) // stations, username and password come from the vars.php
+function get_station_keys($gfurl, $stations, $username, $password) // stations, username and password come from the vars.php
 {
     for ($x=0, $keys=array_keys($stations), $c=count($keys); $x<$c; $x++) { 
         if ($test_flag) { echo($keys[$x]. ": " . $stations[$keys[$x]][0] . $stations[$keys[$x]][1] . "<br>"); }
         // create the gti:checkName request
         $cn_xml = create_gti_CNRequest ($stations[$keys[$x]][0]);
         // call the gti:checkName API function
-        $res = call_gti_api('checkName', $cn_xml, $username, $password);
+        $res = call_gti_api($gfurl, 'checkName', $cn_xml, $username, $password);
         // set station key in stations array
         $resultxml = simplexml_load_string($res); 
         $stations[$keys[$x]][1] = $resultxml->results->id;
@@ -83,7 +83,7 @@ function create_gti_DLRequest ($stname, $stid, $refday, $reftime, $maxlist, $max
 }
 
 // Call GTI API via cURL
-function call_gti_api($gfunc, $http_body, $username, $password) // gfunc here either checkName or departureList
+function call_gti_api($gfurl, $gfunc, $http_body, $username, $password) // gfunc here either checkName or departureList
 {
     // sign the api request
     $bin_signature = hash_hmac("sha1", $http_body, $password, true); 
@@ -199,7 +199,9 @@ function print_departures($resultxml, $maxlist, $table = FALSE) { // resultxml d
                 echo $resultxml->departures[$i]->line->direction . ' '; // line direction 
                 if ($no) { echo '</s>'; }
                 tab($table, 'right');
+                if ($no) { echo '<s>'; } // strike if no journey
                 now($tdep, $table); // "sofort" switch
+                if ($no) { echo '</s>'; } 
                 tab($table);
                 if ($no) { echo '<font color="red"> FÄLLT AUS</font>'; } 
                 if ($ex) { echo ' (Verstärkerfahrt)'; }

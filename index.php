@@ -15,7 +15,7 @@ include ('inc/hvvc_vars.php'); // vars + station query xml
 include ('inc/hvvc_functions.php'); //functions
 
 // get actual station IDs from GeoFox
-$stat = get_station_keys($stations, $username, $password);
+$stat = get_station_keys($gfurl, $stations, $username, $password);
 
 // create gti:departureList request
 if ($both_dirs) { // both directions
@@ -24,8 +24,8 @@ if ($both_dirs) { // both directions
     $dl_xml = create_gti_DLRequest ($stat["dep"][0], $stat["dep"][1], $refday, $reftime, $maxlist, $maxtimeoffset, $stat["via"][1]);
 }
 
-// get departure list for Mensingstraße
-$res = call_gti_api('departureList', $dl_xml, $username, $password);
+// get departure list for dep
+$res = call_gti_api($gfurl, 'departureList', $dl_xml, $username, $password);
 
 // read result as xml
 $resultxml = simplexml_load_string($res);  
