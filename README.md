@@ -24,6 +24,8 @@ The ```devdata``` directory contains sample XML files that demonstrate the commu
 The "request"-data is produced by the hvvclient, whereas the "response" data is delivered by the Geofox server.
 The ```DLResponse.xml``` provided contains realtime data for transport that are on time, delayed, or in traffic jam, as well as cancelled journeys and plan data where no realtime data is available.
 
+The project is developed using the [NetBeans IDE](https://netbeans.apache.org/) and contains the NetBeans project data in its ```nbproject``` folder.
+
 ## Authors
 
 * **axaneco** - *Initial work*
