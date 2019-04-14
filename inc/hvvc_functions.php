@@ -89,7 +89,7 @@ function call_gti_api($gfurl, $gfunc, $http_body, $username, $password) { // gfu
     // make UUID for X-TraceId
     $traceid = v4();
     // create API call URI
-    $ch = curl_init('http://api-test.geofox.de/gti/public/' . $gfunc);
+    $ch = curl_init($gfurl . $gfunc);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLINFO_HEADER_OUT, true);
     curl_setopt($ch, CURLOPT_POST, true);
