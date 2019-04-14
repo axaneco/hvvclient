@@ -1,6 +1,6 @@
 # hvvclient Release Notes
 
-## C1904-2 - 14.04.2019
+## C1904.2 - 14.04.2019
 
 * generalized departure and via stations 
 * output as table option
