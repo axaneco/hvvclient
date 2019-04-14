@@ -1,11 +1,11 @@
 # hvvclient Release Notes
 
-## C1904.2 - 14.04.2019
+## C1904.2
 
 * generalized departure and via stations 
 * output as table option
 * GeoFox URL now variable
 
-## Initial upload - 05.04.2019
+## Initial upload
 
 * initial version, API calls are working
