@@ -11,6 +11,7 @@
  * 
  */
 
+// display departures for both directions og selected station
 $both_dirs = TRUE;
 
 //geofox url
@@ -19,12 +20,12 @@ $gfurl = 'http://api-test.geofox.de/gti/public/';
 // stations array
 // first station: departures
 // second station: via filter for direction control
-// XXX filled by get_station_keys() with HVV station codes
-$stations = array(  "dep" => array( "Rödingsmarkt", "XXX"), 
+// XXX later gets filled by get_station_keys() with HVV station codes
+$stations = array(  "dep" => array( "Jungfernstieg", "XXX"), 
                     "via" => array( "Hamburg Hbf", "XXX") 
 );
 
-// date
+// present date
 $refday = date("d.m.Y");
 $reftime = date("H:i");
 

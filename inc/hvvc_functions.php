@@ -12,32 +12,32 @@
  */
 
 // get all the station keys
-function get_station_keys($gfurl, $stations, $username, $password) // stations, username and password come from the vars.php
-{
-    for ($x=0, $keys=array_keys($stations), $c=count($keys); $x<$c; $x++) { 
-        if ($test_flag) { echo($keys[$x]. ": " . $stations[$keys[$x]][0] . $stations[$keys[$x]][1] . "<br>"); }
+function get_station_keys($gfurl, $stations, $username, $password) { // stations, username and password come from the vars.php
+    for ($x = 0, $keys = array_keys($stations), $c = count($keys); $x < $c; $x++) {
+        if ($test_flag) {
+            echo($keys[$x] . ": " . $stations[$keys[$x]][0] . $stations[$keys[$x]][1] . "<br>");
+        }
         // create the gti:checkName request
-        $cn_xml = create_gti_CNRequest ($stations[$keys[$x]][0]);
+        $cn_xml = create_gti_CNRequest($stations[$keys[$x]][0]);
         // call the gti:checkName API function
         $res = call_gti_api($gfurl, 'checkName', $cn_xml, $username, $password);
         // set station key in stations array
-        $resultxml = simplexml_load_string($res); 
+        $resultxml = simplexml_load_string($res);
         $stations[$keys[$x]][1] = $resultxml->results->id;
     }
     return $stations;
 }
 
 // create xml gti:CNRequest (checkName xml body), see https://api-test.geofox.de/gti/doc/html/GTIHandbuch_p.html#x1-270002.2
-function create_gti_CNRequest ($stname)  
-{
+function create_gti_CNRequest($stname) {
     // xml header
     $dom = new DOMDocument('1.0', 'utf-8');
     $dom->xmlStandalone = TRUE;
-    
+
     //set request type with attributes
     $root = $dom->createElement("gti:CNRequest");
     $root->setAttribute("xmlns:gti", "http://www.geofox.de/schema/geofoxThinInterface");
-    
+
     // define structure and set parameters
     $dom->appendChild($root);
     $root->appendChild($n_theName = $dom->createElement("theName"));
@@ -50,16 +50,15 @@ function create_gti_CNRequest ($stname)
 }
 
 // create xml gti:DLRequest (departureList xml body), see https://api-test.geofox.de/gti/doc/html/GTIHandbuch_p.html#x1-410002.4
-function create_gti_DLRequest ($stname, $stid, $refday, $reftime, $maxlist, $maxtimeoffset, $filterid = FALSE)
-{
+function create_gti_DLRequest($stname, $stid, $refday, $reftime, $maxlist, $maxtimeoffset, $filterid = FALSE) {
     // xml header
     $dom = new DOMDocument('1.0', 'utf-8');
     $dom->xmlStandalone = TRUE;
-    
+
     //set request type with attributes
     $root = $dom->createElement("gti:DLRequest");
     $root->setAttribute("xmlns:gti", "http://www.geofox.de/schema/geofoxThinInterface");
-    
+
     // define structure and set parameters
     $dom->appendChild($root);
     $root->appendChild($n_version = $dom->createElement("version", "35"));
@@ -78,15 +77,14 @@ function create_gti_DLRequest ($stname, $stid, $refday, $reftime, $maxlist, $max
     }
     $root->appendChild($n_maxtimeoffset = $dom->createElement("maxTimeOffset", $maxtimeoffset));
     $root->appendChild($n_userealtime = $dom->createElement("useRealtime", "true"));
-    
+
     return $dom->saveXML();
 }
 
 // Call GTI API via cURL
-function call_gti_api($gfurl, $gfunc, $http_body, $username, $password) // gfunc here either checkName or departureList
-{
+function call_gti_api($gfurl, $gfunc, $http_body, $username, $password) { // gfunc here either checkName or departureList
     // sign the api request
-    $bin_signature = hash_hmac("sha1", $http_body, $password, true); 
+    $bin_signature = hash_hmac("sha1", $http_body, $password, true);
     $signature = base64_encode($bin_signature);
     // make UUID for X-TraceId
     $traceid = v4();
@@ -110,14 +108,13 @@ function call_gti_api($gfurl, $gfunc, $http_body, $username, $password) // gfunc
     );
     // Submit the POST request
     $resultxml = curl_exec($ch);
-    curl_close($ch); 
+    curl_close($ch);
     return $resultxml;
 }
 
 // tableswitch
-function tab($table, $alignment = FALSE)
-{
-    if ($table) { 
+function tab($table, $alignment = FALSE) {
+    if ($table) {
         echo "</td>";
         if ($alignment) {
             echo "<td align=$alignment>";
@@ -132,7 +129,7 @@ function check_disturbances($resultxml, $i, $tdelay, $table) {
     $rt = $resultxml->departures[$i]->attributes->types[0]; // is either REALTIME or missing
     $tj = $resultxml->departures[$i]->attributes->types[1]; // is either ACCURATE or TRAFFIC_JAM
     $dis = FALSE; // no disturbance initially
-    
+
     if ($table) {
         echo "<td>";
     }
@@ -151,7 +148,7 @@ function check_disturbances($resultxml, $i, $tdelay, $table) {
         echo "<img src='assets/images/yellow.png' height='14' border='0'/>";
         $dis = TRUE;
     }
-    $res = array( "rt" => $rt, "dis" => $dis );
+    $res = array("rt" => $rt, "dis" => $dis);
     return $res;
 }
 
@@ -174,13 +171,16 @@ function now($tdep, $table) {
 
 // print out the departure list
 function print_departures($resultxml, $maxlist, $table = FALSE) { // resultxml delivered by the GeoFox API, here: call_gti_api($gfunc, $http_body, $username, $password)
-
-    if ($table) { echo "<table>\n"; }
+    if ($table) {
+        echo "<table>\n";
+    }
     if ($resultxml->returnCode == 'OK') {
         for ($i = 0; $i < $maxlist; $i++) {
             $id = $resultxml->departures[$i]->line->id;         // get bus id
             if ($id) { // go on only if there's a result in the xml
-                if ($table) {  echo "<tr>"; }
+                if ($table) {
+                    echo "<tr>";
+                }
                 $toffset = $resultxml->departures[$i]->timeOffset;  // departure time offset in minutes from query 
                 $tdelay = round(($resultxml->departures[$i]->delay) / 60, 0, PHP_ROUND_HALF_UP);  // planned/known delay, if any, converted to minutes
                 $tdep = $toffset + $tdelay; // estimated departure time including known delay
@@ -195,56 +195,67 @@ function print_departures($resultxml, $maxlist, $table = FALSE) { // resultxml d
                 tab($table, 'center');
                 echo "<img src='http://www.geofox.de/icon_service/line?height=14&amp;lineKey=" . $id . "'> ";   // line icon
                 tab($table);
-                if ($no) { echo '<s>'; } // strike if no journey
+                if ($no) {
+                    echo '<s>';
+                } // strike if no journey
                 echo $resultxml->departures[$i]->line->direction . ' '; // line direction 
-                if ($no) { echo '</s>'; }
+                if ($no) {
+                    echo '</s>';
+                }
                 tab($table, 'right');
-                if ($no) { echo '<s>'; } // strike if no journey
+                if ($no) {
+                    echo '<s>';
+                } // strike if no journey
                 now($tdep, $table); // "sofort" switch
-                if ($no) { echo '</s>'; } 
+                if ($no) {
+                    echo '</s>';
+                }
                 tab($table);
-                if ($no) { echo '<font color="red"> FÄLLT AUS</font>'; } 
-                if ($ex) { echo ' (Verstärkerfahrt)'; }
+                if ($no) {
+                    echo '<font color="red"> FÄLLT AUS</font>';
+                }
+                if ($ex) {
+                    echo ' (Verstärkerfahrt)';
+                }
                 if ($table) {
                     echo "</td></tr>\n";
                 } else {
-                    echo "<br>\n";  
+                    echo "<br>\n";
                 }
             }
         }
-    echo "</table>\n";
+        echo "</table>\n";
     } else {
         echo 'Fehler: GeoFox returned an error';
     }
 }
 
 /**
-   * 
-   * Generate v4 UUID
-   * 
-   * Version 4 UUIDs are pseudo-random.
-   * 
-   * @author Andrew Moore
-   * @link http://www.php.net/manual/en/function.uniqid.php#94959
-   * 
-   * source https://github.com/macx/rfc-4122-uuid/blob/master/src/uuid.php
-   * 
-   */
-  function v4() 
-  {
+ * 
+ * Generate v4 UUID
+ * 
+ * Version 4 UUIDs are pseudo-random.
+ * 
+ * @author Andrew Moore
+ * @link http://www.php.net/manual/en/function.uniqid.php#94959
+ * 
+ * source https://github.com/macx/rfc-4122-uuid/blob/master/src/uuid.php
+ * 
+ */
+function v4() {
     return sprintf('%04x%04x-%04x-%04x-%04x-%04x%04x%04x',
-    // 32 bits for "time_low"
-    mt_rand(0, 0xffff), mt_rand(0, 0xffff),
-    // 16 bits for "time_mid"
-    mt_rand(0, 0xffff),
-    // 16 bits for "time_hi_and_version",
-    // four most significant bits holds version number 4
-    mt_rand(0, 0x0fff) | 0x4000,
-    // 16 bits, 8 bits for "clk_seq_hi_res",
-    // 8 bits for "clk_seq_low",
-    // two most significant bits holds zero and one for variant DCE1.1
-    mt_rand(0, 0x3fff) | 0x8000,
-    // 48 bits for "node"
-    mt_rand(0, 0xffff), mt_rand(0, 0xffff), mt_rand(0, 0xffff)
+            // 32 bits for "time_low"
+            mt_rand(0, 0xffff), mt_rand(0, 0xffff),
+            // 16 bits for "time_mid"
+            mt_rand(0, 0xffff),
+            // 16 bits for "time_hi_and_version",
+            // four most significant bits holds version number 4
+            mt_rand(0, 0x0fff) | 0x4000,
+            // 16 bits, 8 bits for "clk_seq_hi_res",
+            // 8 bits for "clk_seq_low",
+            // two most significant bits holds zero and one for variant DCE1.1
+            mt_rand(0, 0x3fff) | 0x8000,
+            // 48 bits for "node"
+            mt_rand(0, 0xffff), mt_rand(0, 0xffff), mt_rand(0, 0xffff)
     );
-  }
+}

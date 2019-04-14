@@ -44,7 +44,7 @@ if ($both_dirs) { // both directions
 } else {
     echo "<br><br>Nächste Abfahrten ab " . $stat["dep"][0] . " Richtung " . $stat["via"][0] . ":<br><br>\n";
 }
-print_departures($resultxml, $maxlist, TRUE);
+print_departures($resultxml, $maxlist, TRUE); // boole parameter: table display yes/no
 
 echo "</span></span>\n";
 
