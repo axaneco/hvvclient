@@ -14,6 +14,17 @@
 include ('inc/hvvc_vars.php'); // vars + station query xml
 include ('inc/hvvc_functions.php'); //functions
 
+// parameter "from" given in URL?
+if ($_GET["from"]) {
+    $both_dirs = TRUE;
+    $stations["dep"][0] = $_GET["from"];
+}
+// parameter "to" given in URL?
+if ($_GET["to"]) {
+    $both_dirs = FALSE;
+    $stations["via"][0] = $_GET["to"];
+}
+
 // get actual station IDs from GeoFox
 $stat = get_station_keys($gfurl, $stations, $username, $password);
 
