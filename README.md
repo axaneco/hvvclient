@@ -15,7 +15,7 @@ Please note that the Geofox API documentation etc. is in German, as well as the 
 
 ### Installing
 
-Install the ```assets``` and ```inc``` folders plus ```index.php``` to some directory on your machine where your web server can find it. Fill in the access credentials for the Geofox API in ```inc/hvvc_vars.php``` with your data, start up the web server (if it's not running already), and point your browser to the index.php. 
+Install the ```assets``` and ```inc``` folders plus ```index.php``` to some directory on your machine where your web server can find it. Fill in the access credentials for the Geofox API in ```inc/hvvc_vars.php``` with your data, start up the web server (if it's not running already), and point your browser to the ```index.php```. 
 Now you should see the live departures of all public transport running from the ```$stations``` array defined in ```hvvc_vars.php```, which you can - and should - change later on, of course.
 
 ## Testing
