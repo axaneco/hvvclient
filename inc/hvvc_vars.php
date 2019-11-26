@@ -25,8 +25,8 @@ if ($api_prod) {
 // first station: departures
 // second station: via filter for direction control
 // XXX filled by get_station_keys() with HVV station codes
-$stations = array(  "dep" => array( "Jungfernstieg", "XXX"), 
-                    "via" => array( "Hamburg Hbf", "XXX") 
+$stations = array(  "dep" => array( "Hamburg Hbf", "XXX"), 
+                    "via" => array( "", "XXX") 
 );
 
 // date

@@ -25,6 +25,11 @@ if ($_GET["to"]) {
     $stations["via"][0] = $_GET["to"];
 }
 
+// parameter "dd" given in URL?
+if ($_GET["dd"]) {
+    $ddelay = $_GET["dd"];
+}
+
 // get actual station IDs from GeoFox
 $stat = get_station_keys($gfurl, $stations, $username, $password);
 
@@ -55,7 +60,7 @@ if ($both_dirs) { // both directions
 } else {
     echo "<br><br>Nächste Abfahrten ab " . $stat["dep"][0] . " Richtung " . $stat["via"][0] . ":<br><br>\n";
 }
-print_departures($resultxml, $maxlist, TRUE); // boole parameter: table display yes/no
+print_departures($resultxml, $maxlist, TRUE, $ddelay); // boole parameter: table display yes/no
 
 echo "</span></span>\n";
 

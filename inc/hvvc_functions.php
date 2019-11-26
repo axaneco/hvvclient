@@ -154,6 +154,9 @@ function check_disturbances($resultxml, $i, $tdelay, $table) {
 
 // sofort switch
 function now($tdep, $table) {
+    if ($tdep < 0) {
+        echo ' ist abgefahren'; // bypass time garbage with departures in the past
+    }
     if ($tdep == 0) {
         echo ' sofort';
     } else {
@@ -170,14 +173,14 @@ function now($tdep, $table) {
 }
 
 // print out the departure list
-function print_departures($resultxml, $maxlist, $table = FALSE) { // resultxml delivered by the GeoFox API, here: call_gti_api($gfunc, $http_body, $username, $password)
+function print_departures($resultxml, $maxlist, $table = FALSE, $ddelay = FALSE) { // resultxml delivered by the GeoFox API, here: call_gti_api($gfunc, $http_body, $username, $password)
     if ($table) {
         echo "<table>\n";
     }
     if ($resultxml->returnCode == 'OK') {
         for ($i = 0; $i < $maxlist; $i++) {
             $id = $resultxml->departures[$i]->line->id;         // get bus id
-            if ($id) { // go on only if there's a result in the xml
+            if ($id) { // go on only if there's a result in the xml 
                 if ($table) {
                     echo "<tr>";
                 }
@@ -207,6 +210,9 @@ function print_departures($resultxml, $maxlist, $table = FALSE) { // resultxml d
                     echo '<s>';
                 } // strike if no journey
                 now($tdep, $table); // "sofort" switch
+                if ($tdelay > 0 && $ddelay) { // print delay in minutes if present and display switch is on
+                    echo ' (+' . $tdelay . ')';
+                }
                 if ($no) {
                     echo '</s>';
                 }

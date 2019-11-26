@@ -1,5 +1,10 @@
 # hvvclient Release Notes
 
+## C1911.1
+
+* handle departures in the past
+* added "dd" URL parameter to display delay in minutes
+
 ## C1904.4
 
 * GeoFox URL production switch
