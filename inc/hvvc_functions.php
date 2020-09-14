@@ -28,7 +28,7 @@ function get_station_keys($gfurl, $stations, $username, $password) { // stations
     return $stations;
 }
 
-// create xml gti:CNRequest (checkName xml body), see https://api-test.geofox.de/gti/doc/html/GTIHandbuch_p.html#x1-270002.2
+// create xml gti:CNRequest (checkName xml body)
 function create_gti_CNRequest($stname) {
     // xml header
     $dom = new DOMDocument('1.0', 'utf-8');
@@ -49,7 +49,7 @@ function create_gti_CNRequest($stname) {
     return $dom->saveXML();
 }
 
-// create xml gti:DLRequest (departureList xml body), see https://api-test.geofox.de/gti/doc/html/GTIHandbuch_p.html#x1-410002.4
+// create xml gti:DLRequest (departureList xml body)
 function create_gti_DLRequest($stname, $stid, $refday, $reftime, $maxlist, $maxtimeoffset, $filterid = FALSE) {
     // xml header
     $dom = new DOMDocument('1.0', 'utf-8');

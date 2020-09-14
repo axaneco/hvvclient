@@ -5,21 +5,15 @@
  * implements checkName and departureList calls to the the GEOFOX Thin Interface (GTI)
  * a Passenger Information System for the Hamburger Verkehrsverbund (HVV)
  * for details see sections 2.2 and 2.4 of GTI Handbuch V35.1 
- * https://api-test.geofox.de/gti/doc/html/GTIHandbuch_p.html
+ * https://gti.geofox.de/html/GTIHandbuch_p.html
  * 
  * @author axaneco
  * 
  */
 
 $both_dirs = FALSE;
-$api_prod = FALSE;
-
-//geofox url
-if ($api_prod) {
-    $gfurl = 'http://api-prod.geofox.de/gti/public/';
-} else {
-    $gfurl = 'http://api-test.geofox.de/gti/public/';
-}
+// geofox API url
+$gfurl = 'https://gti.geofox.de/gti/public/';
 
 // stations array
 // first station: departures

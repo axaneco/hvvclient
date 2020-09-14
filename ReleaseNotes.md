@@ -1,5 +1,9 @@
 # hvvclient Release Notes
 
+## C2009.1
+
+* switch to new Geofox GTI server
+
 ## C1911.1
 
 * handle departures in the past
