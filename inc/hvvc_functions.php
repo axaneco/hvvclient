@@ -146,7 +146,7 @@ function check_disturbances($resultxml, $i, $tdelay, $table) {
         echo "<td>";
     }
     // no live info -> blank symbol
-    if ($rt === NULL) {
+    if ($rt[0] === NULL) {
         echo "<img src='assets/images/empty.png' height='14' border='0'/>";
         $dis = TRUE;
     }
