@@ -12,7 +12,7 @@
  */
 
 // Version string
-$hvvc_version = 'C2102.1';
+$hvvc_version = 'C2102.1A';
 // debugging mode
 $hvvc_debug = FALSE;
 // geofox API url
