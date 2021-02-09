@@ -5,12 +5,11 @@
  * implements checkName and departureList calls to the the GEOFOX Thin Interface (GTI)
  * a Passenger Information System for the Hamburger Verkehrsverbund (HVV)
  * for details see sections 2.2 and 2.4 of GTI Handbuch V35.1 
- * https://api-test.geofox.de/gti/doc/html/GTIHandbuch_p.html
+ * https://gti.geofox.de/html/GTIHandbuch_p.html
  * 
  * @author axaneco
  * 
  */
-
 // get all the station keys
 function get_station_keys($gfurl, $stations, $username, $password) { // stations, username and password come from the vars.php
     for ($x = 0, $keys = array_keys($stations), $c = count($keys); $x < $c; $x++) {
@@ -33,6 +32,7 @@ function create_gti_CNRequest($stname) {
     // xml header
     $dom = new DOMDocument('1.0', 'utf-8');
     $dom->xmlStandalone = TRUE;
+    $dom->formatOutput = TRUE;
 
     //set request type with attributes
     $root = $dom->createElement("gti:CNRequest");
@@ -54,6 +54,7 @@ function create_gti_DLRequest($stname, $stid, $refday, $reftime, $maxlist, $maxt
     // xml header
     $dom = new DOMDocument('1.0', 'utf-8');
     $dom->xmlStandalone = TRUE;
+    $dom->formatOutput = TRUE;
 
     //set request type with attributes
     $root = $dom->createElement("gti:DLRequest");
@@ -61,7 +62,8 @@ function create_gti_DLRequest($stname, $stid, $refday, $reftime, $maxlist, $maxt
 
     // define structure and set parameters
     $dom->appendChild($root);
-    $root->appendChild($n_version = $dom->createElement("version", "35"));
+    //$root->appendChild($n_version = $dom->createElement("version", "35"));
+    $root->appendChild($n_version = $dom->createElement("version", "38"));
     $root->appendChild($n_station = $dom->createElement("station"));
     $n_station->appendChild($n_name = $dom->createElement("name", $stname));
     $n_station->appendChild($n_city = $dom->createElement("city", "Hamburg"));
@@ -83,6 +85,8 @@ function create_gti_DLRequest($stname, $stid, $refday, $reftime, $maxlist, $maxt
 
 // Call GTI API via cURL
 function call_gti_api($gfurl, $gfunc, $http_body, $username, $password) { // gfunc here either checkName or departureList
+    global $hvvc_debug;
+    global $hvvc_version;
     // sign the api request
     $bin_signature = hash_hmac("sha1", $http_body, $password, true);
     $signature = base64_encode($bin_signature);
@@ -101,13 +105,20 @@ function call_gti_api($gfurl, $gfunc, $http_body, $username, $password) { // gfu
         'geofox-auth-type: HmacSHA1',
         'geofox-auth-user: ' . $username,
         'geofox-auth-signature: ' . $signature,
-        'User-Agent: RESTcall',
+        'User-Agent: ax-hvvclient ' . $hvvc_version,
         'X-Platform: web',
         'X-TraceId: ' . $traceid,
         'Content-Length: ' . strlen($http_body))
     );
     // Submit the POST request
     $resultxml = curl_exec($ch);
+    if ($hvvc_debug) {
+        echo "<p style=\"font-family:'Courier New'\">cURL start<br>";
+        $cURL = curl_getinfo ($ch,  CURLINFO_HEADER_OUT); 
+        //print_r($cURL);
+        echo nl2br($cURL);
+        echo "<br>cURL end</p>";
+    }
     curl_close($ch);
     return $resultxml;
 }
@@ -126,7 +137,8 @@ function tab($table, $alignment = FALSE) {
 
 // check disturbances
 function check_disturbances($resultxml, $i, $tdelay, $table) {
-    $rt = $resultxml->departures[$i]->attributes->types[0]; // is either REALTIME or missing
+    //$rt = $resultxml->departures[$i]->attributes->types[0]; // is either REALTIME or missing
+    $rt = $resultxml->departures[$i]->delay; // is either 0, >0 or missing
     $tj = $resultxml->departures[$i]->attributes->types[1]; // is either ACCURATE or TRAFFIC_JAM
     $dis = FALSE; // no disturbance initially
 
@@ -134,7 +146,7 @@ function check_disturbances($resultxml, $i, $tdelay, $table) {
         echo "<td>";
     }
     // no live info -> blank symbol
-    if ($rt != 'REALTIME') {
+    if ($rt === NULL) {
         echo "<img src='assets/images/empty.png' height='14' border='0'/>";
         $dis = TRUE;
     }
@@ -192,7 +204,8 @@ function print_departures($resultxml, $maxlist, $table = FALSE, $ddelay = FALSE)
                 // check (and display as icon) disturbances
                 $dst = check_disturbances($resultxml, $i, $tdelay, $table);
                 // live info and everything ok -> green icon
-                if ($dst["rt"] == 'REALTIME' && $dst["dis"] == FALSE) {
+                //if ($dst["rt"] == 'REALTIME' && $dst["dis"] == FALSE) {
+                if ($dst["rt"] == '0' && $dst["dis"] == FALSE) {
                     echo "<img src='assets/images/green.png' height='14' border='0'/>";
                 }
                 tab($table, 'center');

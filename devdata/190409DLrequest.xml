@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gti:DLRequest xmlns:gti="http://www.geofox.de/schema/geofoxThinInterface">
+    <version>35</version>
+    <station>
+        <name>U R..dingsmarkt</name>
+        <city>Hamburg</city>
+        <id>Master:11004</id>
+        <type>STATION</type>
+    </station>
+    <time>
+        <date>09.04.2019</date>
+        <time>09:01</time>
+    </time>
+    <maxList>30</maxList>
+    <maxTimeOffset>720</maxTimeOffset>
+    <useRealtime>true</useRealtime>
+</gti:DLRequest>

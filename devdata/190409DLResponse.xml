@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><gti:DLResponse xmlns:gti="http://www.geofox.de/schema/geofoxThinInterface">
+    <returnCode>OK</returnCode>
+    <time>
+        <date>09.04.2019</date>
+        <time>09:01</time>
+    </time>
+    <departures>
+        <line>
+            <name>17</name>
+            <direction>U Berne (Berner Heerweg)</direction>
+            <origin>U Feldstra..e</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Gelenkbus</model>
+            </type>
+            <id>HHA-B:17_HHA-B</id>
+        </line>
+        <timeOffset>-1</timeOffset>
+        <delay>60</delay>
+        <serviceId>78412</serviceId>
+        <station>
+            <combinedName>U R..dingsmarkt (Gro..er Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>U3</name>
+            <direction>Hauptbahnhof S..d - Barmbek</direction>
+            <origin>Barmbek - Sierichstra..e</origin>
+            <type>
+                <simpleType>TRAIN</simpleType>
+                <shortInfo>U</shortInfo>
+                <longInfo>U-Bahn</longInfo>
+                <model>DT3</model>
+            </type>
+            <id>HHA-U:U3_HHA-U</id>
+        </line>
+        <timeOffset>1</timeOffset>
+        <delay>0</delay>
+        <serviceId>39335</serviceId>
+        <station>
+            <combinedName>R..dingsmarkt</combinedName>
+            <id>Master:11906</id>
+        </station>
+        <platform>Gleis 1</platform>
+        <realtimePlatform>Gleis 1</realtimePlatform>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>U3</name>
+            <direction>Schlump - Barmbek</direction>
+            <origin>Barmbek - Mundsburg</origin>
+            <type>
+                <simpleType>TRAIN</simpleType>
+                <shortInfo>U</shortInfo>
+                <longInfo>U-Bahn</longInfo>
+                <model>DT5</model>
+            </type>
+            <id>HHA-U:U3_HHA-U</id>
+        </line>
+        <timeOffset>1</timeOffset>
+        <delay>120</delay>
+        <station>
+            <combinedName>R..dingsmarkt</combinedName>
+            <id>Master:11906</id>
+        </station>
+        <platform>Gleis 2</platform>
+        <realtimePlatform>Gleis 2</realtimePlatform>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>35</name>
+            <direction>Sorenkoppel</direction>
+            <origin>Hamburg Messe (Eingang Ost)</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Schnellbus</shortInfo>
+                <longInfo>Niederflur-Schnellbus</longInfo>
+                <model>Schnellbus</model>
+            </type>
+            <id>HHA-B:35_HHA-B</id>
+        </line>
+        <timeOffset>2</timeOffset>
+        <delay>0</delay>
+        <cancelled>true</cancelled>
+        <serviceId>91952</serviceId>
+        <station>
+            <combinedName>U R..dingsmarkt (Gro..er Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>3</name>
+            <direction>Rathausmarkt (Petrikirche)</direction>
+            <origin>Stadionstra..e</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Niederflur Metrobus</model>
+            </type>
+            <id>VHH:3_VHH</id>
+        </line>
+        <timeOffset>2</timeOffset>
+        <serviceId>87488</serviceId>
+        <station>
+            <combinedName>U R..dingsmarkt (Gro..er Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>U3</name>
+            <direction>Hauptbahnhof S..d - Wandsbek-Gartenstadt</direction>
+            <origin>Barmbek - Sierichstra..e</origin>
+            <type>
+                <simpleType>TRAIN</simpleType>
+                <shortInfo>U</shortInfo>
+                <longInfo>U-Bahn</longInfo>
+                <model>DT5</model>
+            </type>
+            <id>HHA-U:U3_HHA-U</id>
+        </line>
+        <timeOffset>3</timeOffset>
+        <delay>0</delay>
+        <serviceId>692738496</serviceId>
+        <station>
+            <combinedName>R..dingsmarkt</combinedName>
+            <id>Master:11906</id>
+        </station>
+        <platform>Gleis 1</platform>
+        <realtimePlatform>Gleis 1</realtimePlatform>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>17</name>
+            <direction>U Feldstra..e</direction>
+            <origin>U Berne (Berner Heerweg)</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Gelenkbus</model>
+            </type>
+            <id>HHA-B:17_HHA-B</id>
+        </line>
+        <timeOffset>4</timeOffset>
+        <delay>0</delay>
+        <cancelled>true</cancelled>
+        <serviceId>78124</serviceId>
+        <station>
+            <combinedName>U R..dingsmarkt (Gro..er Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>U3</name>
+            <direction>Schlump</direction>
+            <origin>Barmbek - Mundsburg</origin>
+            <type>
+                <simpleType>TRAIN</simpleType>
+                <shortInfo>U</shortInfo>
+                <longInfo>U-Bahn</longInfo>
+                <model>DT5</model>
+            </type>
+            <id>HHA-U:U3_HHA-U</id>
+        </line>
+        <timeOffset>4</timeOffset>
+        <delay>60</delay>
+        <serviceId>39431</serviceId>
+        <station>
+            <combinedName>R..dingsmarkt</combinedName>
+            <id>Master:11906</id>
+        </station>
+        <platform>Gleis 2</platform>
+        <realtimePlatform>Gleis 2</realtimePlatform>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>3</name>
+            <direction>Stadionstra..e</direction>
+            <origin>Rathausmarkt</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Niederflur Metrobus</model>
+            </type>
+            <id>VHH:3_VHH</id>
+        </line>
+        <timeOffset>4</timeOffset>
+        <serviceId>87742</serviceId>
+        <station>
+            <combinedName>U R..dingsmarkt (Gro..er Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>U3</name>
+            <direction>Schlump - Barmbek</direction>
+            <origin>Barmbek - Mundsburg</origin>
+            <type>
+                <simpleType>TRAIN</simpleType>
+                <shortInfo>U</shortInfo>
+                <longInfo>U-Bahn</longInfo>
+                <model>DT5</model>
+            </type>
+            <id>HHA-U:U3_HHA-U</id>
+        </line>
+        <timeOffset>6</timeOffset>
+        <delay>120</delay>
+        <station>
+            <combinedName>R..dingsmarkt</combinedName>
+            <id>Master:11906</id>
+        </station>
+        <platform>Gleis 2</platform>
+        <realtimePlatform>Gleis 2</realtimePlatform>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>3</name>
+            <direction>Kraftwerk Tiefstack</direction>
+            <origin>Stadionstra..e</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Niederflur Metrobus</model>
+            </type>
+            <id>VHH:3_VHH</id>
+        </line>
+        <timeOffset>7</timeOffset>
+        <serviceId>87612</serviceId>
+        <station>
+            <combinedName>U R..dingsmarkt (Gro..er Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>U3</name>
+            <direction>Hauptbahnhof S..d - Wandsbek-Gartenstadt</direction>
+            <origin>Barmbek - Sierichstra..e</origin>
+            <type>
+                <simpleType>TRAIN</simpleType>
+                <shortInfo>U</shortInfo>
+                <longInfo>U-Bahn</longInfo>
+                <model>DT5</model>
+            </type>
+            <id>HHA-U:U3_HHA-U</id>
+        </line>
+        <timeOffset>8</timeOffset>
+        <delay>0</delay>
+        <serviceId>1749888071</serviceId>
+        <station>
+            <combinedName>R..dingsmarkt</combinedName>
+            <id>Master:11906</id>
+        </station>
+        <platform>Gleis 1</platform>
+        <realtimePlatform>Gleis 1</realtimePlatform>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>3</name>
+            <direction>Stadionstra..e</direction>
+            <origin>Kraftwerk Tiefstack</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Niederflur Metrobus</model>
+            </type>
+            <id>VHH:3_VHH</id>
+        </line>
+        <timeOffset>8</timeOffset>
+        <serviceId>87062</serviceId>
+        <station>
+            <combinedName>U R..dingsmarkt (Gro..er Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>17</name>
+            <direction>Karlsh..he</direction>
+            <origin>U Feldstra..e</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Gelenkbus</model>
+            </type>
+            <id>HHA-B:17_HHA-B</id>
+        </line>
+        <timeOffset>9</timeOffset>
+        <delay>0</delay>
+        <serviceId>78313</serviceId>
+        <station>
+            <combinedName>U R..dingsmarkt (Gro..er Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <value>Prognose ungenau - Fahrzeug im Stau</value>
+            <types>REALTIME</types>
+            <types>TRAFFIC_JAM</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>U3</name>
+            <direction>Schlump - Barmbek</direction>
+            <origin>Barmbek - Mundsburg</origin>
+            <type>
+                <simpleType>TRAIN</simpleType>
+                <shortInfo>U</shortInfo>
+                <longInfo>U-Bahn</longInfo>
+                <model>DT5</model>
+            </type>
+            <id>HHA-U:U3_HHA-U</id>
+        </line>
+        <timeOffset>11</timeOffset>
+        <delay>0</delay>
+        <serviceId>584808237</serviceId>
+        <station>
+            <combinedName>R..dingsmarkt</combinedName>
+            <id>Master:11906</id>
+        </station>
+        <platform>Gleis 2</platform>
+        <realtimePlatform>Gleis 2</realtimePlatform>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>17</name>
+            <direction>U Feldstra..e</direction>
+            <origin>U Berne (Berner Heerweg)</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Niederflur Metrobus</model>
+            </type>
+            <id>HHA-B:17_HHA-B</id>
+        </line>
+        <timeOffset>12</timeOffset>
+        <serviceId>78126</serviceId>
+        <station>
+            <combinedName>U R..dingsmarkt (Gro..er Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>35</name>
+            <direction>Hamburg Messe (Eingang Ost)</direction>
+            <origin>Sorenkoppel</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Schnellbus</shortInfo>
+                <longInfo>Niederflur-Schnellbus</longInfo>
+                <model>Schnellbus</model>
+            </type>
+            <id>HHA-B:35_HHA-B</id>
+        </line>
+        <timeOffset>12</timeOffset>
+        <delay>0</delay>
+        <cancelled>true</cancelled>
+        <serviceId>92055</serviceId>
+        <station>
+            <combinedName>U R..dingsmarkt (Gro..er Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>37</name>
+            <direction>Bramfelder Dorfplatz (Heukoppel)</direction>
+            <origin>Schenefeld, Schenefelder Platz</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Schnellbus</shortInfo>
+                <longInfo>Niederflur-Schnellbus</longInfo>
+                <model>Schnellbus</model>
+            </type>
+            <id>HHA-B:37_HHA-B</id>
+        </line>
+        <timeOffset>12</timeOffset>
+        <delay>0</delay>
+        <cancelled>true</cancelled>
+        <serviceId>88522</serviceId>
+        <station>
+            <combinedName>U R..dingsmarkt (Gro..er Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <value>Prognose ungenau - Fahrzeug im Stau</value>
+            <types>REALTIME</types>
+            <types>TRAFFIC_JAM</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>3</name>
+            <direction>Rathausmarkt (Petrikirche)</direction>
+            <origin>Stadionstra..e</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Niederflur Metrobus</model>
+            </type>
+            <id>VHH:3_VHH</id>
+        </line>
+        <timeOffset>12</timeOffset>
+        <serviceId>87489</serviceId>
+        <station>
+            <combinedName>U R..dingsmarkt (Gro..er Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>U3</name>
+            <direction>Hauptbahnhof S..d - Wandsbek-Gartenstadt</direction>
+            <origin>Barmbek - Sierichstra..e</origin>
+            <type>
+                <simpleType>TRAIN</simpleType>
+                <shortInfo>U</shortInfo>
+                <longInfo>U-Bahn</longInfo>
+                <model>DT5</model>
+            </type>
+            <id>HHA-U:U3_HHA-U</id>
+        </line>
+        <timeOffset>13</timeOffset>
+        <delay>60</delay>
+        <station>
+            <combinedName>R..dingsmarkt</combinedName>
+            <id>Master:11906</id>
+        </station>
+        <platform>Gleis 1</platform>
+        <realtimePlatform>Gleis 1</realtimePlatform>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>3</name>
+            <direction>Stadionstra..e</direction>
+            <origin>Rathausmarkt</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Niederflur Metrobus</model>
+            </type>
+            <id>VHH:3_VHH</id>
+        </line>
+        <timeOffset>14</timeOffset>
+        <serviceId>87743</serviceId>
+        <station>
+            <combinedName>U R..dingsmarkt (Gro..er Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>37</name>
+            <direction>Schenefeld, Schenefelder Platz</direction>
+            <origin>Bramfelder Dorfplatz (Heukoppel)</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Schnellbus</shortInfo>
+                <longInfo>Niederflur-Schnellbus</longInfo>
+                <model>Schnellbus</model>
+            </type>
+            <id>HHA-B:37_HHA-B</id>
+        </line>
+        <timeOffset>15</timeOffset>
+        <delay>0</delay>
+        <cancelled>true</cancelled>
+        <serviceId>88372</serviceId>
+        <station>
+            <combinedName>U R..dingsmarkt (Gro..er Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>U3</name>
+            <direction>Schlump - Barmbek</direction>
+            <origin>Wandsbek-Gartenstadt</origin>
+            <type>
+                <simpleType>TRAIN</simpleType>
+                <shortInfo>U</shortInfo>
+                <longInfo>U-Bahn</longInfo>
+                <model>DT5</model>
+            </type>
+            <id>HHA-U:U3_HHA-U</id>
+        </line>
+        <timeOffset>16</timeOffset>
+        <delay>0</delay>
+        <serviceId>1641958304</serviceId>
+        <station>
+            <combinedName>R..dingsmarkt</combinedName>
+            <id>Master:11906</id>
+        </station>
+        <platform>Gleis 2</platform>
+        <realtimePlatform>Gleis 2</realtimePlatform>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>3</name>
+            <direction>Kraftwerk Tiefstack</direction>
+            <origin>Schenefeld, Schenefelder Platz</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Niederflur Metrobus</model>
+            </type>
+            <id>VHH:3_VHH</id>
+        </line>
+        <timeOffset>17</timeOffset>
+        <serviceId>87312</serviceId>
+        <station>
+            <combinedName>U R..dingsmarkt (Gro..er Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>U3</name>
+            <direction>Hauptbahnhof S..d - Wandsbek-Gartenstadt</direction>
+            <origin>Barmbek - Sierichstra..e</origin>
+            <type>
+                <simpleType>TRAIN</simpleType>
+                <shortInfo>U</shortInfo>
+                <longInfo>U-Bahn</longInfo>
+                <model>DT5</model>
+            </type>
+            <id>HHA-U:U3_HHA-U</id>
+        </line>
+        <timeOffset>18</timeOffset>
+        <delay>0</delay>
+        <station>
+            <combinedName>R..dingsmarkt</combinedName>
+            <id>Master:11906</id>
+        </station>
+        <platform>Gleis 1</platform>
+        <realtimePlatform>Gleis 1</realtimePlatform>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>3</name>
+            <direction>Schenefeld, Schenefelder Platz</direction>
+            <origin>Kraftwerk Tiefstack</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Niederflur Metrobus</model>
+            </type>
+            <id>VHH:3_VHH</id>
+        </line>
+        <timeOffset>18</timeOffset>
+        <serviceId>87195</serviceId>
+        <station>
+            <combinedName>U R..dingsmarkt (Gro..er Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>17</name>
+            <direction>U Berne (Berner Heerweg)</direction>
+            <origin>U Feldstra..e</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Gelenkbus</model>
+            </type>
+            <id>HHA-B:17_HHA-B</id>
+        </line>
+        <timeOffset>19</timeOffset>
+        <delay>0</delay>
+        <serviceId>78415</serviceId>
+        <station>
+            <combinedName>U R..dingsmarkt (Gro..er Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>U3</name>
+            <direction>Schlump - Barmbek</direction>
+            <origin>Barmbek - Mundsburg</origin>
+            <type>
+                <simpleType>TRAIN</simpleType>
+                <shortInfo>U</shortInfo>
+                <longInfo>U-Bahn</longInfo>
+                <model>DT5</model>
+            </type>
+            <id>HHA-U:U3_HHA-U</id>
+        </line>
+        <timeOffset>21</timeOffset>
+        <delay>0</delay>
+        <station>
+            <combinedName>R..dingsmarkt</combinedName>
+            <id>Master:11906</id>
+        </station>
+        <platform>Gleis 2</platform>
+        <realtimePlatform>Gleis 2</realtimePlatform>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>17</name>
+            <direction>U Feldstra..e</direction>
+            <origin>U Berne (Berner Heerweg)</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Gelenkbus</model>
+            </type>
+            <id>HHA-B:17_HHA-B</id>
+        </line>
+        <timeOffset>22</timeOffset>
+        <delay>0</delay>
+        <cancelled>true</cancelled>
+        <serviceId>78128</serviceId>
+        <station>
+            <combinedName>U R..dingsmarkt (Gro..er Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <value>Prognose ungenau - Fahrzeug im Stau</value>
+            <types>REALTIME</types>
+            <types>TRAFFIC_JAM</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>35</name>
+            <direction>Sorenkoppel</direction>
+            <origin>Hamburg Messe (Eingang Ost)</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Schnellbus</shortInfo>
+                <longInfo>Niederflur-Schnellbus</longInfo>
+                <model>Schnellbus</model>
+            </type>
+            <id>HHA-B:35_HHA-B</id>
+        </line>
+        <timeOffset>22</timeOffset>
+        <delay>0</delay>
+        <cancelled>true</cancelled>
+        <serviceId>91955</serviceId>
+        <station>
+            <combinedName>U R..dingsmarkt (Gro..er Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+        <attributes>
+            <title></title>
+            <isPlanned>true</isPlanned>
+            <types>REALTIME</types>
+            <types>ACCURATE</types>
+        </attributes>
+    </departures>
+</gti:DLResponse>

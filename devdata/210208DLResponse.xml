@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:DLResponse xmlns:ns2="http://www.geofox.de/schema/geofoxThinInterface">
+    <returnCode>OK</returnCode>
+    <time>
+        <date>08.02.2021</date>
+        <time>20:50</time>
+    </time>
+    <departures>
+        <line>
+            <name>16</name>
+            <direction>Rentenversicherung Nord</direction>
+            <origin>Elbe-Einkaufszentrum</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Solobus</model>
+            </type>
+            <id>HHA-B:16_HHA-B</id>
+        </line>
+        <timeOffset>0</timeOffset>
+        <delay>0</delay>
+        <serviceId>110048</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>3</name>
+            <direction>Stadionstraße</direction>
+            <origin>Kraftwerk Tiefstack</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Niederflur Metrobus</model>
+            </type>
+            <id>VHH:3_VHH</id>
+        </line>
+        <timeOffset>1</timeOffset>
+        <delay>60</delay>
+        <serviceId>46868</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>16</name>
+            <direction>EEZ (Julius-Brecht-Straße)</direction>
+            <origin>Rentenversicherung Nord</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Schnellbus</model>
+            </type>
+            <id>HHA-B:16_HHA-B</id>
+        </line>
+        <timeOffset>3</timeOffset>
+        <delay>120</delay>
+        <serviceId>109651</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>3</name>
+            <direction>Kraftwerk Tiefstack</direction>
+            <origin>Stadionstraße</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Niederflur Metrobus</model>
+            </type>
+            <id>VHH:3_VHH</id>
+        </line>
+        <timeOffset>3</timeOffset>
+        <delay>120</delay>
+        <serviceId>45417</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>37</name>
+            <direction>Bramfelder Dorfplatz (Heukoppel)</direction>
+            <origin>Schenefeld, Schenefelder Platz</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Schnellbus</shortInfo>
+                <longInfo>Niederflur-Schnellbus</longInfo>
+                <model>Schnellbus</model>
+            </type>
+            <id>HHA-B:37_HHA-B</id>
+        </line>
+        <timeOffset>5</timeOffset>
+        <delay>0</delay>
+        <serviceId>116999</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>37</name>
+            <direction>Schenefeld, Schenefelder Platz</direction>
+            <origin>Bramfelder Dorfplatz (Heukoppel)</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Schnellbus</shortInfo>
+                <longInfo>Niederflur-Schnellbus</longInfo>
+                <model>Schnellbus</model>
+            </type>
+            <id>HHA-B:37_HHA-B</id>
+        </line>
+        <timeOffset>6</timeOffset>
+        <delay>0</delay>
+        <serviceId>117126</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>17</name>
+            <direction>U Berne (Berner Heerweg)</direction>
+            <origin>U Feldstraße</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Gelenkbus</model>
+            </type>
+            <id>HHA-B:17_HHA-B</id>
+        </line>
+        <timeOffset>7</timeOffset>
+        <delay>0</delay>
+        <serviceId>110975</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>17</name>
+            <direction>U Feldstraße</direction>
+            <origin>Karlshöhe</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Niederflur Metrobus</model>
+            </type>
+            <id>HHA-B:17_HHA-B</id>
+        </line>
+        <timeOffset>8</timeOffset>
+        <serviceId>111362</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>16</name>
+            <direction>Rentenversicherung Nord</direction>
+            <origin>Elbe-Einkaufszentrum</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Niederflur Metrobus</model>
+            </type>
+            <id>HHA-B:16_HHA-B</id>
+        </line>
+        <timeOffset>10</timeOffset>
+        <serviceId>110049</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>3</name>
+            <direction>Stadionstraße</direction>
+            <origin>Kraftwerk Tiefstack</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Niederflur Metrobus</model>
+            </type>
+            <id>VHH:3_VHH</id>
+        </line>
+        <timeOffset>11</timeOffset>
+        <delay>60</delay>
+        <serviceId>46869</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>16</name>
+            <direction>EEZ (Julius-Brecht-Straße)</direction>
+            <origin>Rentenversicherung Nord</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Solobus</model>
+            </type>
+            <id>HHA-B:16_HHA-B</id>
+        </line>
+        <timeOffset>13</timeOffset>
+        <delay>0</delay>
+        <serviceId>109652</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>X35</name>
+            <direction>Breitenfelder Straße</direction>
+            <origin>Sorenkoppel</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>XpressBus</shortInfo>
+                <longInfo>XpressBus</longInfo>
+                <model>Gelenkbus</model>
+            </type>
+            <id>HHA-B:X35_HHA-B</id>
+        </line>
+        <timeOffset>13</timeOffset>
+        <delay>0</delay>
+        <serviceId>76163</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>3</name>
+            <direction>Kraftwerk Tiefstack</direction>
+            <origin>Stadionstraße</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Niederflur Metrobus</model>
+            </type>
+            <id>VHH:3_VHH</id>
+        </line>
+        <timeOffset>13</timeOffset>
+        <delay>0</delay>
+        <serviceId>45418</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>31</name>
+            <direction>Lauenburg, ZOB</direction>
+            <origin>U Rödingsmarkt (Großer Burstah)</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Schnellbus</shortInfo>
+                <longInfo>Niederflur-Schnellbus</longInfo>
+                <model>Niederflur-Schnellbus</model>
+            </type>
+            <id>VHH:31_VHH</id>
+        </line>
+        <timeOffset>14</timeOffset>
+        <delay>0</delay>
+        <serviceId>97603</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>17</name>
+            <direction>U S Barmbek</direction>
+            <origin>U Feldstraße</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Gelenkbus</model>
+            </type>
+            <id>HHA-B:17_HHA-B</id>
+        </line>
+        <timeOffset>17</timeOffset>
+        <delay>0</delay>
+        <serviceId>111621</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>17</name>
+            <direction>U Feldstraße</direction>
+            <origin>U Berne (Berner Heerweg)</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Niederflur Metrobus</model>
+            </type>
+            <id>HHA-B:17_HHA-B</id>
+        </line>
+        <timeOffset>18</timeOffset>
+        <serviceId>111250</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>X35</name>
+            <direction>Sorenkoppel</direction>
+            <origin>UK Eppendorf</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>XpressBus</shortInfo>
+                <longInfo>XpressBus</longInfo>
+                <model>Gelenkbus</model>
+            </type>
+            <id>HHA-B:X35_HHA-B</id>
+        </line>
+        <timeOffset>18</timeOffset>
+        <serviceId>76462</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>16</name>
+            <direction>Rentenversicherung Nord</direction>
+            <origin>Elbe-Einkaufszentrum</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Solobus</model>
+            </type>
+            <id>HHA-B:16_HHA-B</id>
+        </line>
+        <timeOffset>20</timeOffset>
+        <delay>240</delay>
+        <serviceId>110050</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+        <attributes>
+            <title/>
+            <isPlanned>false</isPlanned>
+            <value>Prognose ungenau - Fahrzeug im Stau</value>
+            <types>REALTIME</types>
+            <types>TRAFFIC_JAM</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>3</name>
+            <direction>Stadionstraße</direction>
+            <origin>Kraftwerk Tiefstack</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Niederflur Metrobus</model>
+            </type>
+            <id>VHH:3_VHH</id>
+        </line>
+        <timeOffset>21</timeOffset>
+        <delay>0</delay>
+        <serviceId>46870</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>3</name>
+            <direction>Kraftwerk Tiefstack</direction>
+            <origin>Stadionstraße</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Niederflur Metrobus</model>
+            </type>
+            <id>VHH:3_VHH</id>
+        </line>
+        <timeOffset>22</timeOffset>
+        <delay>0</delay>
+        <serviceId>45419</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>16</name>
+            <direction>Bf. Altona</direction>
+            <origin>Rentenversicherung Nord</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Schnellbus</model>
+            </type>
+            <id>HHA-B:16_HHA-B</id>
+        </line>
+        <timeOffset>23</timeOffset>
+        <delay>0</delay>
+        <serviceId>110561</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+        <attributes>
+            <title/>
+            <isPlanned>false</isPlanned>
+            <value>Prognose ungenau - Fahrzeug im Stau</value>
+            <types>REALTIME</types>
+            <types>TRAFFIC_JAM</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>17</name>
+            <direction>U Berne (Berner Heerweg)</direction>
+            <origin>U Feldstraße</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Gelenkbus</model>
+            </type>
+            <id>HHA-B:17_HHA-B</id>
+        </line>
+        <timeOffset>27</timeOffset>
+        <delay>0</delay>
+        <serviceId>110976</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>17</name>
+            <direction>U Feldstraße</direction>
+            <origin>Karlshöhe</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Gelenkbus</model>
+            </type>
+            <id>HHA-B:17_HHA-B</id>
+        </line>
+        <timeOffset>28</timeOffset>
+        <delay>0</delay>
+        <serviceId>111363</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>16</name>
+            <direction>Rentenversicherung Nord</direction>
+            <origin>Elbe-Einkaufszentrum</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Solobus</model>
+            </type>
+            <id>HHA-B:16_HHA-B</id>
+        </line>
+        <timeOffset>30</timeOffset>
+        <delay>0</delay>
+        <serviceId>110051</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>3</name>
+            <direction>Stadionstraße</direction>
+            <origin>Kraftwerk Tiefstack</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Niederflur Metrobus</model>
+            </type>
+            <id>VHH:3_VHH</id>
+        </line>
+        <timeOffset>31</timeOffset>
+        <delay>0</delay>
+        <serviceId>46871</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>3</name>
+            <direction>Kraftwerk Tiefstack</direction>
+            <origin>Stadionstraße</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Niederflur Metrobus</model>
+            </type>
+            <id>VHH:3_VHH</id>
+        </line>
+        <timeOffset>32</timeOffset>
+        <delay>0</delay>
+        <serviceId>45420</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>16</name>
+            <direction>EEZ (Julius-Brecht-Straße)</direction>
+            <origin>Rentenversicherung Nord</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Bus</shortInfo>
+                <longInfo>Niederflur Metrobus</longInfo>
+                <model>Gelenkbus</model>
+            </type>
+            <id>HHA-B:16_HHA-B</id>
+        </line>
+        <timeOffset>33</timeOffset>
+        <delay>0</delay>
+        <serviceId>109653</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>X35</name>
+            <direction>Am Licentiatenberg</direction>
+            <origin>Sorenkoppel</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>XpressBus</shortInfo>
+                <longInfo>XpressBus</longInfo>
+                <model>Gelenkbus</model>
+            </type>
+            <id>HHA-B:X35_HHA-B</id>
+        </line>
+        <timeOffset>33</timeOffset>
+        <delay>0</delay>
+        <serviceId>76072</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+    <departures>
+        <line>
+            <name>37</name>
+            <direction>Bramfelder Dorfplatz (Heukoppel)</direction>
+            <origin>Schenefeld, Schenefelder Platz</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Schnellbus</shortInfo>
+                <longInfo>Niederflur-Schnellbus</longInfo>
+                <model>Schnellbus</model>
+            </type>
+            <id>HHA-B:37_HHA-B</id>
+        </line>
+        <timeOffset>35</timeOffset>
+        <delay>60</delay>
+        <serviceId>117000</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+        <attributes>
+            <title/>
+            <isPlanned>false</isPlanned>
+            <value>Prognose ungenau - Fahrzeug im Stau</value>
+            <types>REALTIME</types>
+            <types>TRAFFIC_JAM</types>
+        </attributes>
+    </departures>
+    <departures>
+        <line>
+            <name>37</name>
+            <direction>Schenefeld, Schenefelder Platz</direction>
+            <origin>Bramfelder Dorfplatz (Heukoppel)</origin>
+            <type>
+                <simpleType>BUS</simpleType>
+                <shortInfo>Schnellbus</shortInfo>
+                <longInfo>Niederflur-Schnellbus</longInfo>
+                <model>Schnellbus</model>
+            </type>
+            <id>HHA-B:37_HHA-B</id>
+        </line>
+        <timeOffset>36</timeOffset>
+        <serviceId>117127</serviceId>
+        <station>
+            <combinedName>U Rödingsmarkt (Großer Burstah)</combinedName>
+            <id>Master:11004</id>
+        </station>
+    </departures>
+</ns2:DLResponse>

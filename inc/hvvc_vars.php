@@ -11,7 +11,10 @@
  * 
  */
 
-$both_dirs = FALSE;
+// Version string
+$hvvc_version = 'C2102.1';
+// debugging mode
+$hvvc_debug = FALSE;
 // geofox API url
 $gfurl = 'https://gti.geofox.de/gti/public/';
 

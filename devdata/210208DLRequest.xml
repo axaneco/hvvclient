@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gti:DLRequest xmlns:gti="http://www.geofox.de/schema/geofoxThinInterface">
+    <version>38</version>
+    <station>
+        <name>Rödingsmarkt</name>
+        <city>Hamburg</city>
+        <id>Master:11004</id>
+        <type>STATION</type>
+    </station>
+    <time>
+        <date>08.02.2021</date>
+        <time>20:50</time>
+    </time>
+    <maxList>30</maxList>
+    <maxTimeOffset>720</maxTimeOffset>
+    <useRealtime>true</useRealtime>
+</gti:DLRequest>
