@@ -209,7 +209,7 @@ function print_departures($resultxml, $maxlist, $table = FALSE, $ddelay = FALSE)
                     echo "<img src='assets/images/green.png' height='14' border='0'/>";
                 }
                 tab($table, 'center');
-                echo "<img src='http://www.geofox.de/icon_service/line?height=14&amp;lineKey=" . $id . "'> ";   // line icon
+                echo "<img src='https://cloud.geofox.de/icon/line?height=14&amp;lineKey=" . $id . "'> ";   // line icon
                 tab($table);
                 if ($no) {
                     echo '<s>';

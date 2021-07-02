@@ -1,5 +1,9 @@
 # hvvclient Release Notes
 
+## C2107.1
+
+ * changed Icon Service URL to cloud as requested by HBT/geofox
+
 ## C2102.1
 
 * reflect the changes in XML delivered by geofox (see 2102*xml data in devdata dir) regarding live info: live info criteria is now if a <delay> tag is delivered. If yes, we have live data, if no, it's timetable data.
